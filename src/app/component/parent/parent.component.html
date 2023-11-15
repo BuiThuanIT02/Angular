@@ -1,0 +1,7 @@
+<app-child [userName] ="userName"></app-child>
+<!-- [userName] cú pháp sử dụng thuộc tính động -->
+
+<button (click)="changeName($event)">Update</button>
+<input type="text" [(ngModel)] ="userName">
+<p>{{userName}}</p>
+
