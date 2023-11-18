@@ -1,11 +1,12 @@
 
-import { Component,Input, OnInit, OnChanges,SimpleChanges } from "@angular/core";
+import { Component,Input,Output, OnInit, OnChanges,SimpleChanges,EventEmitter } from "@angular/core";
 
 @Component({
   selector:"app-progress-bar",
   template:`
   <div class="progress-bar-container" [style.backgroundColor]="backgroundColor">
     <div class="progress" [style]="{backgroundColor:progressColor, width:progress+'%'}"></div>
+
  </div>
   `,
   styles: [
@@ -21,6 +22,8 @@ import { Component,Input, OnInit, OnChanges,SimpleChanges } from "@angular/core"
 
 })
 export class ProgressBarComponent implements OnInit, OnChanges{
+
+
   backgroundColor ='#ccc';
   @Input() progressColor= "tomato";
 

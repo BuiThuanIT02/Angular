@@ -1,31 +1,37 @@
 <div *ngFor="let user of users; index as idx; count as total; first as isFirst; even as isEven; odd as isOdd">
-<div>
-  <p>{{idx}}</p>
-  <p>{{total}}</p>
-  <p>{{isFirst}}</p>
-  <p>{{isEven}}</p>
-  <p>{{isOdd}}</p>
-  <div *ngIf="user.age >=18">
-    {{user.name}}
-    <button (click)="user.age = user.age -1">-</button>
-    Age: {{user.age}}
-    <button (click)="user.age = user.age +1">+</button>
+  <div>
+    <p>{{idx}}</p>
+    <p>{{total}}</p>
+    <p>{{isFirst}}</p>
+    <p>{{isEven}}</p>
+    <p>{{isOdd}}</p>
+    <div *ngIf="user.age >=18">
+      {{user.name}}
+      <button (click)="user.age = user.age -1">-</button>
+      Age: {{user.age}}
+      <button (click)="user.age = user.age +1">+</button>
+    </div>
   </div>
-</div>
-<hr>
-</div>
-<hr>
-<h1>Binding class and Style binding</h1>
-<button (click)="isDanger = !isDanger" >Toggle Border Color</button>
-<button (click)="isWarning = !isWarning">Toggle Background Color</button>
-<div class="box" [class]="{'red-border':isDanger}" [class.bg]="isWarning">Box1</div>
-<p [style]="{'color':'blue'}">Sytle Binding</p>
+  <hr>
+  </div>
+  <hr>
+  <h1>Binding class and Style binding</h1>
+  <button (click)="isDanger = !isDanger" >Toggle Border Color</button>
+  <button (click)="isWarning = !isWarning">Toggle Background Color</button>
+  <div class="box" [class]="{'red-border':isDanger}" [class.bg]="isWarning">Box1</div>
+  <p [style]="{'color':'blue'}">Sytle Binding</p>
 
-<app-progress-bar ></app-progress-bar>
-<br>
-<button (click)="curentProgress= curentProgress+1">Toggle Progress</button>
-<!-- curentProgress: lấy ở trong typeJS của component app -->
-<app-progress-bar [progress]="curentProgress" [progressColor] ="'blue'"></app-progress-bar>
+  <app-progress-bar ></app-progress-bar>
+  <br>
+  <button (click)="curentProgress= curentProgress+1">Toggle Progress</button>
+  <!-- curentProgress: lấy ở trong typeJS của component app -->
+  <app-progress-bar [progress]="curentProgress" [progressColor] ="'blue'"></app-progress-bar>
 
 
+  <hr>
+  <br><br><br><br>
+
+
+
+<app-author-list></app-author-list>
 

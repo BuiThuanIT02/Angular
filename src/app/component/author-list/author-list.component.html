@@ -1,0 +1,4 @@
+<app-author-detail *ngFor="let author of authors" [author] ="author" (select)="onSelectChild($event)"></app-author-detail>
+<div>
+  {{currentAuthor}}
+</div>

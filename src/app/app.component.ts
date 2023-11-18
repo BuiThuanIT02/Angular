@@ -10,6 +10,8 @@ export class AppComponent {
   isDanger = false;
   isWarning =false;
   curentProgress=70;
+
+
   users =[
     {
       id:1,
